@@ -39,8 +39,9 @@ body {
     cursor: pointer;
 }
 
-#cards-spread:hover {
-    animation: x;
+#cards-spread > div:hover {
+        transform: scale(1.07);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .card-array {
@@ -60,6 +61,12 @@ body {
 #question-line, #instruction {
     display: none;
     width: 400px;
+    color: white;
+    font-size: bolder;
+}
+
+#question {
+    color: greenyellow;
 }
 
 .btn {
@@ -75,6 +82,10 @@ body {
 
 h1, h2, h3, h4 {
     color: white;
+}
+
+#cards-spread h4 {
+    color: black;
 }
 
 #start-btn {

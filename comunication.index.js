@@ -11,28 +11,48 @@ const questionsOnCom = [
         // "Get in the shoes of your listener. What does that mean?", 
         // "You have been invited to address a group on their grievances. What are the best approaches?"
 
+
 ]
 
 
 const correctAnsOnCom = [
-            "Listen To The Speaker attentively",
-            "Give them time to talk",
+            "Listen to them attentively",            
             "Understand where they are coming from by asking questions!",
-            "Tell them about yourself",
             "Prepare some important questions about random things",
             "Call them out when they are wrong",
+            "Tell them about yourself",
+            "Ask them about something personal"
         ];
 
-const  wrongAnswers = [
-            "Tell them about yourself",
-            "Prepare some important questions about random things",
-            "Call them out when they are wrong",
-            "Tell a joke about their culture",
-            "Speak to them about their mistakes",
-            "Ask them to listen to you by raising your voice",
-            "Use analogies from conversations that are unrelated",
-            "Ask ChatGPT for advice before you answer",
-        ]
+const questionTwoAnswer = [
+            "Read about the things the person love",            
+            "Focus on yourself",
+            "Ask them to teach something they enjoy talking about",
+            "Lift the burden of the conversation off them when you share your own short experience",
+            "Go for serious questions as soon as the conversation starts",
+            "When they say something dishonest, pretend you're judge and give them a honest verdict"
+        ];
+
+const questionThreeAnswer = [
+            "Read about the things the person love",            
+            "Focus on yourself",
+            "Ask them to teach something they enjoy talking about",
+            "Lift the burden of the conversation off them when you share your own short experience",
+            "Go for serious questions as soon as the conversation starts",
+            "When they say something dishonest, pretend you're judge and give them a honest verdict"
+        ];
+
+
+// const  wrongAnswers = [
+//             "Tell them about yourself",
+//             "Prepare some important questions about random things",
+//             "Call them out when they are wrong",
+//             "Tell a joke about their culture",
+//             "Speak to them about their mistakes",
+//             "Ask them to listen to you by raising your voice",
+//             "Use analogies from conversations that are unrelated",
+//             "Ask ChatGPT for advice before you answer",
+//         ]
 
 // how to make the cards display fully
 
@@ -50,8 +70,6 @@ const question = document.querySelector("#question");
 
 // creating a random number
  randomQuestionNumber = Math.floor(Math.random () * questionsOnCom.length);
-
- 
 
 
 function start () {
@@ -74,19 +92,23 @@ function start () {
     
     
     // trying to add the right answer on the cards
+
+   
     if (0 === randomQuestionNumber) {
         function changeInnerText () {
+            let y = 6;
+            
             for(var i = 0; i <= textAnswer.length; i++){
-                randomAnswerPicked = Math.floor(Math.random () * correctAnsOnCom.length);
-                randomAnswer = correctAnsOnCom[randomAnswerPicked];
-                textAnswer[i].innerHTML = randomAnswer;
+                var randomNumber = i;
+                textAnswer[i].innerHTML = correctAnsOnCom[randomNumber];
             }
         }
         changeInnerText();
-    
     };
-        
+
     }
 
 startBtn.addEventListener("click", start);
+
+// time to append the green cards into the lower box 
 
